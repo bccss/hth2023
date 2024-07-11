@@ -19,11 +19,12 @@ export default function Header() {
 
   // const menuItems = ["About", "Events", "FAQ", "Team", "Sponsors", "Past Events", "Contact"];
   //when we add the "team" and "sponsors" section, use the top array
-  const menuItems = ["About", "Events", "FAQ", "Affiliations"];
+  const menuItems = ["About", "Events", "FAQ", "Sponsors", "Past Events"];
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: '#33396F', fontFamily: 'Poppins, sans-serif' }} className='header'>
+      {/* AppBar color and font-family */}
+      <AppBar position="sticky" sx={{ backgroundColor: '#D6CEA2', fontFamily: 'Poppins, sans-serif' }} className='header'>
         <Toolbar>
           {/* Logo */}
           <Box sx={{ flexGrow: 1 }}>
@@ -33,8 +34,9 @@ export default function Header() {
           {/* Desktop Menu */}
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             {menuItems.map(item => (
-              <Button color="inherit" key={item} sx={{ ml: 2, color: 'white' }}>
-                <a href={`#${item}`} style={{ textDecoration: 'none', color: 'white' }}>{item}</a>
+              <Button color="inherit" key={item} sx={{ ml: 2, color: '#343D2d' }}>
+                {/* Button text color */}
+                <a href={`#${item}`} style={{ textDecoration: 'none', color: '#343D2d' }}>{item}</a>
               </Button>
             ))}
           </Box>
@@ -47,7 +49,8 @@ export default function Header() {
             sx={{ display: { xs: 'flex', md: 'none' } }}
             onClick={handleMenuOpen}
           >
-            <MenuIcon sx={{ color: 'white' }} />
+            {/* Icon color */}
+            <MenuIcon sx={{ color: '#343D24' }} />
           </IconButton>
 
           {/* Mobile Dropdown Menu */}
@@ -55,11 +58,12 @@ export default function Header() {
             anchorEl={openMenu}
             open={Boolean(openMenu)}
             onClose={handleMenuClose}
-            PaperProps={{ style: { backgroundColor: '#33396F' } }}
+            PaperProps={{ style: { backgroundColor: '#D6CEA2' } }} // Menu background color
           >
             {menuItems.map(item => (
-              <MenuItem onClick={handleMenuClose} key={item} sx={{ color: 'white' }}>
-                <a href={`#${item}`} style={{ textDecoration: 'none', color: 'white' }}>{item}</a>
+              <MenuItem onClick={handleMenuClose} key={item} sx={{ color: '#343D24' }}>
+                {/* Menu item text color */}
+                <a href={`#${item}`} style={{ textDecoration: 'none', color: '#343D24' }}>{item}</a>
               </MenuItem>
             ))}
           </Menu>

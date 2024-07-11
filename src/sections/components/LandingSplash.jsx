@@ -1,7 +1,6 @@
 import React from 'react';
 import '../stylesheets/LandingSplash.css';
 
-// Needs to be updated for 2024
 const LandingSplash = () => {
 
   const handleRegisterClick = () => {
@@ -21,8 +20,8 @@ const LandingSplash = () => {
         <div className="info">
           <span className="bc">Boston College</span>
           <span className="date">
-            <span className="desktop-date">Date</span>
-            <span className="mobile-date">Date</span>
+            <span className="desktop-date">October 5-6th</span>
+            <span className="mobile-date">October 5-6th</span>
           </span>
         </div>
         <button className="register" onClick={handleRegisterClick}>Deprecated</button>
