@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../stylesheets/FAQ.css";
 
+// Need to update for 2024
 const dataCollection = [
   {
     question: "Do I need to know how to code?",

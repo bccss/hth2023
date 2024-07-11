@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 import "../stylesheets/PhotoCarousel.css";
 
+
+// Need to be updated for 2024
 const PhotoCarousel = () => {
   const [slide, setSlide] = useState(0);
 
@@ -24,7 +26,7 @@ const PhotoCarousel = () => {
 
   return (
     <div className="carousel-container" id="Past Events">
-      <h2 className="title">PAST EVENTS</h2> 
+      <h2 className="title">PAST EVENTS - NEED to update for 2024</h2> 
       <div className="carousel">
         <BsArrowLeftCircleFill className="arrow arrow-left" onClick={prevSlide} />
         {slides.map((item, idx) => {

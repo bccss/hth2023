@@ -6,7 +6,6 @@ import Header from "./Header";
 import {
   LandingSplash,
   About,
-  Team,
   FAQ,
   Events,
   Sponsors,
@@ -23,7 +22,6 @@ const Home = () => {
           <About />
           <Events />
           <FAQ />
-          {/* <Team /> */}
           {<Sponsors/>}
           <PhotoCarousel data={slides} />
         </Container>
