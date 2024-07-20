@@ -23,7 +23,7 @@ body {
 }
 
 .accordion__title {
-    padding-top: 20px;
+    padding-top: 10px;
     font-family: 'Poppins', sans-serif;
     font-size: 2.5em;
     color: var(--secondary-color);

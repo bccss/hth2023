@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../stylesheets/Events.css";
 
 import converseIcon from '../../assets/icons/converse.png';
@@ -41,29 +41,60 @@ function Events() {
     }
   ]);
 
-  const scheduleImagePath = "/images/schedule.png";
-  const devpostLink = "https://hack-the-heights-8.devpost.com/";
+  const timelineRef = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      root: timelineRef.current,
+      rootMargin: '0px',
+      threshold: 0.5
+    };
+
+    const callback = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'scale(1.05)';
+        } else {
+          entry.target.style.opacity = '0.5';
+          entry.target.style.transform = 'scale(1)';
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    const items = timelineRef.current.querySelectorAll('.timeline-item');
+    items.forEach(item => observer.observe(item));
+
+    return () => {
+      items.forEach(item => observer.unobserve(item));
+    };
+  }, []);
 
   return (
     <div className="container" id="Events">
-      <h1 className="events-heading">events</h1>
-      <div className="cards-container">
-        {cards.map((card, index) => (
-          <div key={index} className="card">
-            <div className="card-header">
-              <div className="card-image">
-                <img src={card.imgSrc} alt={card.title} />
-              </div>
-              <div className="card-details">
-                <h3>{card.title}</h3>
-                <p>{card.time}</p>
+      <h1 className="events-heading">←workshops→</h1>
+      <div className="timeline-container" ref={timelineRef}>
+        <div className="timeline">
+          {cards.map((card, index) => (
+            <div key={index} className="timeline-item">
+              <div className="card">
+                <div className="card-header">
+                  <div className="card-image">
+                    <img src={card.imgSrc} alt={card.title} />
+                  </div>
+                  <div className="card-details">
+                    <h3>{card.title}</h3>
+                    <p>{card.time}</p>
+                  </div>
+                </div>
+                <div className="card-content">
+                  <p>{card.text}</p>
+                </div>
               </div>
             </div>
-            <div className="card-content">
-              <p>{card.text}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

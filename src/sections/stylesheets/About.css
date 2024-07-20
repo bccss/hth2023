@@ -84,7 +84,7 @@ body {
   transition: transform 0.3s ease;
   background: var(--secondary-color);
   width: calc(33.33% - 20px);
-  height: 150px;
+  height: 200px; /* Adjusted height to accommodate additional text */
 }
 
 .icon-card:hover {
@@ -104,4 +104,12 @@ body {
   margin-top: 10px;
   color: var(--font-color);
   text-align: center;
+}
+
+/* Card Description */
+.card-description {
+  margin-top: 10px;
+  font-size: 0.9em;
+  text-align: center;
+  color: var(--font-color);
 }
