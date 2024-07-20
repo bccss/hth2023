@@ -6,12 +6,12 @@ const PhotoCarousel = () => {
   const [slide, setSlide] = useState(0);
 
   const slides = [
-    { "src": "/images/IMG_5235.jpg", "alt": "Image 1" },
-    { "src": "/images/IMG_5240.jpg", "alt": "Image 2" },
+    { "src": "/images/IMG_1405.jpeg", "alt": "Image 1" },
+    { "src": "/images/IMG_1711.JPG", "alt": "Image 2" },
     { "src": "/images/IMG_5251.jpg", "alt": "Image 3" },
-    { "src": "/images/IMG_5258.jpg", "alt": "Image 4" },
-    { "src": "/images/IMG_5270.jpg", "alt": "Image 5" },
-    { "src": "/images/IMG_5279.jpg", "alt": "Image 6" }
+    { "src": "/images/IMG_3436.jpeg", "alt": "Image 4" },
+    { "src": "/images/IMG_3456.jpeg", "alt": "Image 5" },
+    { "src": "/images/IMG_1451.jpeg", "alt": "Image 6" }
   ];
 
   const nextSlide = () => {
