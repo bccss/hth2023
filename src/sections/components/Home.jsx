@@ -15,7 +15,7 @@ import {
 
 const Home = () => {
   return (
-      <Box sx={{ bgcolor: "#9B9ECD", display: 'flex', flexDirection: 'column' }} >
+      <Box sx={{ bgcolor: "#D6CEA2", display: 'flex', flexDirection: 'column' }} >
         <Header />
         <Container component="main" sx={{ flex: 1 }}>
           <LandingSplash />

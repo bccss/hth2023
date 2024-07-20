@@ -8,7 +8,6 @@ import swiftIcon from '../../assets/icons/swift.png';
 import bobrossIcon from '../../assets/icons/bobross.png';
 
 function Events() {
-
   const [cards] = useState([
     {
       title: "Workshop: GitHub",
@@ -20,14 +19,14 @@ function Events() {
       title: "Speaker Event: Converse",
       time: "Nov 4, 2:45 P.M. - 3:30 P.M.",
       text: "Hear BC Grad and Converse Product Manager, Talia Kaplanian, dive into her career journey, the ins and outs of product management, and navigating the tech landscape!",
-       imgSrc: converseIcon
+      imgSrc: converseIcon
     },
     {
-       title: "Speaker Event: Zagaran",
-       time: "Nov 4, 4:15 P.M. - 5:00 P.M.",
-       text: "Join senior software engineer Noah Houghton from Zagaran as he shares insights into startup life and the world of software engineering!",
-       imgSrc: zagaranIcon
-     },
+      title: "Speaker Event: Zagaran",
+      time: "Nov 4, 4:15 P.M. - 5:00 P.M.",
+      text: "Join senior software engineer Noah Houghton from Zagaran as he shares insights into startup life and the world of software engineering!",
+      imgSrc: zagaranIcon
+    },
     {
       title: "Workshop: Swift",
       time: "Nov 4, 5:30 P.M. - 6:15 P.M.",
@@ -46,54 +45,28 @@ function Events() {
   const devpostLink = "https://hack-the-heights-8.devpost.com/";
 
   return (
-    <>
-      <div>
-        <section>
-          <div className="container" id="Events">
-            <h1>EVENTS</h1>
-            <div className="cards">
-              {cards.map((card, index) => (
-                <div key={index} className="card">
-                  <div className="card-header">
-                    <div className="card-details">
-                      <h3>{card.title}</h3>
-                      <p>{card.time}</p>
-                    </div>
-                    <div className="card-image">
-                      <img src={card?.imgSrc} alt={card.title} />
-                    </div>
-                  </div>
-                  <div className="card-content">
-                    <p>{card.text}</p>
-                    {/* Here you can add a button if you want to link to something */}
-                  </div>
-                </div>
-              ))}
+    <div className="container" id="Events">
+      <h1 className="events-heading">events</h1>
+      <div className="cards-container">
+        {cards.map((card, index) => (
+          <div key={index} className="card">
+            <div className="card-header">
+              <div className="card-image">
+                <img src={card.imgSrc} alt={card.title} />
+              </div>
+              <div className="card-details">
+                <h3>{card.title}</h3>
+                <p>{card.time}</p>
+              </div>
             </div>
-            <div className='schedule-container'>
-              <button className='btn schedule-btn'>
-                <a href={scheduleImagePath} target="_blank" rel="noopener noreferrer">
-                  Schedule
-                </a>
-              </button>
-            </div>
-            <div className='schedule-container'>
-              <button className='btn devpost-btn'>
-                <a href={devpostLink} target="_blank" rel="noopener noreferrer">
-                  Devpost
-                </a>
-              </button>
+            <div className="card-content">
+              <p>{card.text}</p>
             </div>
           </div>
-        </section>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 
 export default Events;
-
-
-
-
-

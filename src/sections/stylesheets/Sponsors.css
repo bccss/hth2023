@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com');
 @import url('https://fonts.gstatic.com');
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Root variables for colors */
+:root {
+    --font-color: #F9F6F0;
+    --secondary-color: #343D24;
+    --background-color: #647D5B;
+    --secondary-background-color: #D6CEA2;
+    --accent-color: #BD897E;
+}
 
 .section {
     width: 100%;
@@ -21,12 +29,11 @@
 /* Style for the header */
 #sponsor-header {
     font-size: 2rem;
-    color: #F9F6F0;
+    color: var(--secondary-color);
     text-align: center;
     margin-bottom: 2rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-style: italic;
 }
 
 /* Container for all the logos */
@@ -46,6 +53,11 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem; /* Space at the bottom */
+    transition: transform 0.3s; /* Smooth transition for transform */
+}
+
+.sponsor-logo-container:hover {
+    transform: scale(1.1); /* Increase size by 10% on hover */
 }
 
 .sponsor-logo-container img {

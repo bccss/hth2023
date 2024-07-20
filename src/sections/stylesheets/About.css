@@ -1,29 +1,58 @@
-.about-container {
+/* Import the required fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@400&display=swap');
+
+/* Root variables for colors */
+:root {
+  --font-color: #F9F6F0;
+  --secondary-color: #343D24;
+  --background-color: #647D5B;
+  --secondary-background-color: #D6CEA2;
+  --accent-color: #BD897E;
+}
+
+/* General styles */
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
   font-family: 'Poppins', sans-serif;
+}
+
+/* About container */
+.about-container {
   padding: 50px 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+  background-color: var(--secondary-background-color);
 }
 
 @media (max-width: 768px) {
   .about-container {
-      padding: 50px 5%;
+    padding: 50px 5%;
   }
 }
 
 /* Heading */
 .about-heading {
+  font-family: 'Poppins', sans-serif;
   font-size: 2.5em;
   margin-bottom: 30px;
+  color: var(--secondary-color);
+  padding: 10px; /* Adjust the padding as needed */
 }
+
 
 /* Description */
 .about-description {
   font-size: 1.1em;
   margin-bottom: 30px;
   text-align: center;
+  color: var(--font-color);
+}
+
+.about-heading:hover {
+  font-weight: bolder;
 }
 
 /* Icon Container */
@@ -35,9 +64,9 @@
 
 @media (max-width: 768px) {
   .icon-container {
-      flex-direction: column;
-      align-items: center;
-      width: 200px; /* You can adjust this if you want a different width on mobile */
+    flex-direction: column;
+    align-items: center;
+    width: 150%;
   }
 }
 
@@ -53,25 +82,26 @@
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  background: #33396F;
-  width: calc(33.33% - 20px); /* Default width for desktop */
-  height: 150px; /* Example fixed height, you can adjust based on your preference */
+  background: var(--secondary-color);
+  width: calc(33.33% - 20px);
+  height: 150px;
 }
 
 .icon-card:hover {
-  transform: translateY(10px);
+  transform: translateY(-10px);
+  background: var(--background-color);
 }
 
 @media (max-width: 768px) {
   .icon-card {
-      width: 100%; /* Occupies the full width of its parent (.icon-container) */
-      max-width: 200px; /* This makes sure it does not stretch beyond 200px */
+    width: 100%;
+    max-width: 300px;
   }
 }
 
 /* Icon Text */
 .icon-text {
   margin-top: 10px;
-  color: white;
-  text-align: center; /* This ensures the text is always centered */
+  color: var(--font-color);
+  text-align: center;
 }

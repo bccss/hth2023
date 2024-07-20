@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
 import "../stylesheets/PhotoCarousel.css";
 
-
-// Need to be updated for 2024
 const PhotoCarousel = () => {
   const [slide, setSlide] = useState(0);
 
@@ -26,26 +24,33 @@ const PhotoCarousel = () => {
 
   return (
     <div className="carousel-container" id="Past Events">
-      <h2 className="title">PAST EVENTS - NEED to update for 2024</h2> 
+      <h2 className="title">past hackathons :)</h2> 
       <div className="carousel">
         <BsArrowLeftCircleFill className="arrow arrow-left" onClick={prevSlide} />
-        {slides.map((item, idx) => {
-          return (
-            <img src={process.env.PUBLIC_URL + item.src} alt={item.alt} key={idx} className={slide === idx ? "slide" : "slide-hidden"} />
-          );
-        })}
+        <div className="slide-container">
+          {slides.map((item, idx) => {
+            return (
+              <img 
+                src={process.env.PUBLIC_URL + item.src} 
+                alt={item.alt} 
+                key={idx} 
+                className={slide === idx ? "slide active" : "slide"} 
+              />
+            );
+          })}
+        </div>
         <BsArrowRightCircleFill className="arrow arrow-right" onClick={nextSlide} />
-        <span className="indicators">
+        <div className="indicators">
           {slides.map((_, idx) => {
             return (
               <button
                 key={idx}
                 onClick={() => setSlide(idx)}
-                className={slide === idx ? "indicator" : "indicator-inactive"}
+                className={slide === idx ? "indicator active" : "indicator"}
               ></button>
             );
           })}
-        </span>
+        </div>
       </div>
     </div>
   );

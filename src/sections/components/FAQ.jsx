@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../stylesheets/FAQ.css";
 
-// Need to update for 2024
 const dataCollection = [
   {
     question: "Do I need to know how to code?",
@@ -52,36 +51,30 @@ function FAQ() {
   }
 
   return (
-    <>
-      <div className="container" id="FAQ">
-        <div>
-          <div className="accordion__title">FAQ</div>
-        </div>
-        <div className="accordion__faq">
-          {dataCollection.map((item, index) => (
-            <div key={index} onClick={() => toggleAccordion(index)}>
-              <div className="accordion__faq-heading">
-                <h3 className={accordion === index ? "active" : ""}>
-                  {item.question}
-                </h3>
-                <div>
-                  {accordion === index ? (
-                    <span className="verticle">-</span>
-                  ) : (
-                    <span className="horizental">+</span>
-                  )}
-                </div>
-              </div>
+    <div className="faq-container" id="FAQ">
+      <h1 className="accordion__title">faq</h1>
+      <div className="accordion__faq">
+        {dataCollection.map((item, index) => (
+          <div key={index} className="faq-item" onClick={() => toggleAccordion(index)}>
+            <div className="accordion__faq-heading">
+              <h3 className={accordion === index ? "active" : ""}>
+                {item.question}
+              </h3>
               <div>
-                <p className={accordion === index ? "active" : "inactive"}>
-                  {item.answer}
-                </p>
+                {accordion === index ? (
+                  <span className="vertical">-</span>
+                ) : (
+                  <span className="horizontal">+</span>
+                )}
               </div>
             </div>
-          ))}
-        </div>
+            <div className={accordion === index ? "accordion__faq-content active" : "accordion__faq-content inactive"}>
+              <p>{item.answer}</p>
+            </div>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 

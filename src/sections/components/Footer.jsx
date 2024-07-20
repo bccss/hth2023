@@ -1,65 +1,69 @@
-// Footer.js
 import React from 'react';
 import { Box, Grid, Link, Typography } from '@mui/material';
-import { Facebook, Twitter, Instagram} from '@mui/icons-material';
+import { Facebook, Twitter, Instagram } from '@mui/icons-material';
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <Box 
-      component="footer" 
-      bgcolor="#33396F" 
+    <Box
+      component="footer"
+      bgcolor="#343D24" // Background color
       py={3}
-      px={3} 
+      px={3}
       sx={{
-        color: 'white'
+        color: '#D6CEA2', // Font color
+        textAlign: 'center',
+        mt: 'auto',
+        width: '100%'
       }}
       id="Contact"
     >
       <Grid container justifyContent="space-between" alignItems="center">
-        <Grid item>
-          <Typography variant="p">
-            &copy; {new Date().getFullYear()} Hack-the-Heights. All rights reserved. Hack the Heights is organized under Boston College.
+        <Grid item xs={12} md={6}>
+          <Typography variant="body7">
+            &copy; {new Date().getFullYear()} Hack-the-Heights. All rights reserved. Organized @ Boston College.
           </Typography>
         </Grid>
-        <Grid item>
-        <Link href="https://www.facebook.com/bostoncollegecss/" color="inherit" sx={{ mx: 1 }}>
-            <Facebook 
-                color="inherit"
-                sx={{
-                    fontSize: {
-                        xs: '1.5rem', 
-                        md: '2rem',  
-                        lg: '2.5rem' 
-                    }
-                }}
+        <Grid item xs={12} md={6} sx={{ textAlign: { xs: 'center', md: 'right' } }}>
+          <Link href="https://www.facebook.com/bostoncollegecss/" color="inherit" sx={{ mx: 1 }}>
+            <Facebook
+              sx={{
+                fontSize: {
+                  xs: '2rem',
+                  md: '2rem',
+                  lg: '2.5rem'
+                },
+                color: '#D6CEA2' // Accent Color
+              }}
             />
-        </Link>
-        <Link href="https://twitter.com/bccssociety/" color="inherit" sx={{ mx: 1 }}>
-            <Twitter 
-                color="inherit"
-                sx={{
-                    fontSize: {
-                        xs: '1.5rem', 
-                        md: '2rem',  
-                        lg: '2.5rem' 
-                    }
-                }}
+          </Link>
+          <Link href="https://twitter.com/bccssociety/" color="inherit" sx={{ mx: 1 }}>
+            <Twitter
+              sx={{
+                fontSize: {
+                  xs: '2rem',
+                  md: '2rem',
+                  lg: '2.5rem'
+                },
+                color: '#D6CEA2' // Accent Color
+              }}
             />
-        </Link>
-        <Link href="https://www.instagram.com/bccssociety/" color="inherit" sx={{ mx: 1 }}>
-            <Instagram 
-                color="inherit"
-                sx={{
-                    fontSize: {
-                        xs: '1.5rem', 
-                        md: '2rem',  
-                        lg: '2.5rem' 
-                    }
-                }}
+          </Link>
+          <Link href="https://www.instagram.com/bccssociety/" color="inherit" sx={{ mx: 1 }}>
+            <Instagram
+              sx={{
+                fontSize: {
+                  xs: '2rem',
+                  md: '2rem',
+                  lg: '2.5rem'
+                },
+                color: '#D6CEA2' // Accent Color
+              }}
             />
-        </Link>
+          </Link>
         </Grid>
       </Grid>
     </Box>
   );
-}
+};
+
+export default Footer;
