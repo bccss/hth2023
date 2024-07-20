@@ -1,43 +1,43 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../stylesheets/Events.css";
 
-import converseIcon from '../../assets/icons/converse.png';
-import zagaranIcon from '../../assets/icons/zagaran.png';
+import firstMeeting from '../../assets/icons/firstmeeting.png';
+import frontend from '../../assets/icons/html.png';
 import githubIcon from '../../assets/icons/github.png';
-import swiftIcon from '../../assets/icons/swift.png';
-import bobrossIcon from '../../assets/icons/bobross.png';
+import flask from '../../assets/icons/flask.png';
+import MySQL from '../../assets/icons/mysql.png';
 
 function Events() {
   const [cards] = useState([
     {
-      title: "Workshop: GitHub",
-      time: "Nov 4, 1:30 P.M. - 2:45 P.M.",
-      text: "Discover how to collaborate on GitHub with hands-on examples; perfect for beginners, but open to all!",
+      title: "First General Meeting",
+      time: "September 4th",
+      text: "Learn about Hack the Heights and our club! ",
+      imgSrc: firstMeeting
+    },
+    {
+      title: "Intro to GitHub",
+      time: "September 11th",
+      text: "Learn about how to use GitHub, specifically for your future hackathon project!",
       imgSrc: githubIcon
     },
     {
-      title: "Speaker Event: Converse",
-      time: "Nov 4, 2:45 P.M. - 3:30 P.M.",
-      text: "Hear BC Grad and Converse Product Manager, Talia Kaplanian, dive into her career journey, the ins and outs of product management, and navigating the tech landscape!",
-      imgSrc: converseIcon
+      title: "Frontend in HTML/CSS",
+      time: "September 18th",
+      text: "Learn all about how to make a responsive, and scaleable frontend for a web application",
+      imgSrc: frontend
     },
     {
-      title: "Speaker Event: Zagaran",
-      time: "Nov 4, 4:15 P.M. - 5:00 P.M.",
-      text: "Join senior software engineer Noah Houghton from Zagaran as he shares insights into startup life and the world of software engineering!",
-      imgSrc: zagaranIcon
+      title: "Backend in Flask",
+      time: "September 25th",
+      text: "Learn how to extract, transform, and load data in a user facing application",
+      imgSrc: flask
     },
     {
-      title: "Workshop: Swift",
-      time: "Nov 4, 5:30 P.M. - 6:15 P.M.",
-      text: "Dive into iOS development with Swift; tailored for intermediates, but open to all – master your app game!",
-      imgSrc: swiftIcon
-    },
-    {
-      title: "Bob Ross Painting",
-      time: "Nov 4, 8:00 P.M. - 9:00 P.M.",
-      text: "Channel your inner Bob Ross through Windows Paint while watching Bob Ross on Twitch – a hilarious masterpiece in the making!",
-      imgSrc: bobrossIcon,
+      title: "All About Databases",
+      time: "October 2nd",
+      text: "Leverage MySQL to store, update, and delete your own data",
+      imgSrc: MySQL
     }
   ]);
 
@@ -74,6 +74,7 @@ function Events() {
   return (
     <div className="container" id="Events">
       <h1 className="events-heading">←workshops→</h1>
+      <div className="events-description">Not completely ready for a hackathon yet? Not problem, attend one of our pre-hack workshops to learn all that you need.</div>
       <div className="timeline-container" ref={timelineRef}>
         <div className="timeline">
           {cards.map((card, index) => (

@@ -14,7 +14,7 @@ function About() {
           <FaRegLightbulb size={50} color="var(--secondary-background-color)" />
           <p className="icon-text">Innovation</p>
           <p className="card-description">
-            Develop innovative software or hardware projects centered around a theme of social good.
+            Develop innovative software or hardware projects.
           </p>
         </div>
         <div className="icon-card">

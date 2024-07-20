@@ -3,6 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
 import { styled } from '@mui/system';
 import hthLogo from '../../assets/icons/hth-logo.svg';
+import slackLogo from '../../assets/icons/slack-logo.svg'; // Import the Slack logo
 
 const HeaderLink = styled(Link)({
   textTransform: 'lowercase',
@@ -31,9 +32,10 @@ export default function Header() {
     setOpenMenu(null);
   };
 
-  const menuItems = ["about", "events", "FAQ", "sponsors", "past events"];
+  const menuItems = ["About", "Events", "FAQ", "Sponsors", "Past Events"];
 
-  const scrollToTop = () => {
+  const scrollToTop = (event) => {
+    event.preventDefault();
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -44,9 +46,12 @@ export default function Header() {
     <>
       <AppBar position="sticky" sx={{ backgroundColor: '#343D24', fontFamily: 'Poppins, sans-serif', borderRadius: '0 0 16px 16px' }} className='header'>
         <Toolbar>
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
             <Link href="#" onClick={scrollToTop}>
-              <img src={hthLogo} alt="HTH Logo" style={{ maxHeight: '40px' }} />
+              <img src={hthLogo} alt="HTH Logo" style={{ maxHeight: '40px', marginRight: '10px' } } />
+            </Link>
+            <Link href="https://join.slack.com/t/your-slack-workspace-link" target="_blank" rel="noopener noreferrer">
+              <img src={slackLogo} alt="Slack Logo" style={{ maxHeight: '40px', marginRight: '10px' }} />
             </Link>
           </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>

@@ -110,6 +110,7 @@ body {
 /* Icon Text */
 .icon-text {
   margin-top: 10px;
+  font-size: 1.35rem;
   color: var(--font-color);
   text-align: center;
 }

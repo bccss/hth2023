@@ -19,9 +19,9 @@ const Footer = () => {
     >
       <Grid container justifyContent="space-between" alignItems="center">
         <Grid item xs={12} md={6}>
-          <Typography variant="body7">
-            &copy; {new Date().getFullYear()} Hack-the-Heights. All rights reserved. Organized @ Boston College.
-          </Typography>
+        <Typography sx={{ fontSize: '0.875rem' }}>
+          &copy; {new Date().getFullYear()} Hack-the-Heights. All rights reserved. Organized @ Boston College.
+        </Typography>
         </Grid>
         <Grid item xs={12} md={6} sx={{ textAlign: { xs: 'center', md: 'right' } }}>
           <Link href="https://www.facebook.com/bostoncollegecss/" color="inherit" sx={{ mx: 1 }}>

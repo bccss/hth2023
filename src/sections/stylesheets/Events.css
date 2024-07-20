@@ -17,12 +17,20 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.events-description {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--font-color);
+}
+
 /* Container */
 .container {
   max-width: 1360px;
   width: 100%;
   margin: auto;
   padding: 0px 20px;
+  margin-bottom: 0
 }
 
 #Events {

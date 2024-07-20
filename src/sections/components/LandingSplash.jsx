@@ -44,15 +44,17 @@ const LandingSplash = () => {
   });
 
   return (
-    <div className="landing-splash-container">
-      <div className="content-wrapper">
-        <div className="bccss">BCCSS</div>
-        <div className="subtitle">Hack the Heights presents:</div>
-        <div className="paradise">PARADISE</div>
-        <div className="countdown">
-          {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+    <div>
+      <div className="landing-splash-container">
+        <div className="content-wrapper">
+          <div className="paradise">PARADISE</div>
+          <div className="subtitle">@ Boston College</div>
+          <div className="countdown">
+            {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+          </div>
         </div>
       </div>
+      <div className="gradient-transition"></div>
     </div>
   );
 };

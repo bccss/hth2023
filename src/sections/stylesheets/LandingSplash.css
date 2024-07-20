@@ -1,6 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.gradient-transition {
+  height: 50px; /* Adjust height as needed */
+  background: #343D24;
+  width: 100vw; /* Full viewport width */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0;
+  border-bottom-left-radius: 20px; /* Adjust the radius as needed */
+  border-bottom-right-radius: 20px; /* Adjust the radius as needed */
+}
 
-
+/* Other existing styles */
 html, body {
   width: 100%;
   height: 100%;
@@ -15,12 +25,14 @@ html, body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  text-align: left;
+  text-align: center;
   color: #F9F6F0;
   background-image: url('../../assets/images/background.svg'); /* Add the background image */
   background-size: cover;
-  background-position: center center; 
+  background-position: center center;
   background-repeat: no-repeat;
+  width: 100vw; /* Full viewport width */
+  margin: 0;
 }
 
 .content-wrapper {
@@ -29,58 +41,6 @@ html, body {
   max-width: 1200px;
 }
 
-.bccss {
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  text-align: left;
-}
-
-.subtitle {
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.paradise {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  font-size: 120px;
-  font-style: italic;
-  margin-bottom: 2rem;
-  text-align: left;
-}
-
-.countdown {
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  text-align: left;
-}
-
-.register {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  background-color: #D6CEA2;
-  color: #343D24;
-  padding: 15px 30px;
-  font-size: 18px;
-  border-radius: 24px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: block;
-  margin: 0 auto;
-}
-
-.register:hover {
-  background-color: #647D5B;
-  color: #F9F6F0;
-}
 
 @media only screen and (max-width: 767px) {
   .bccss {
@@ -89,25 +49,41 @@ html, body {
 
   .subtitle {
     font-size: 12px;
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    overflow: hidden; /* Hides any overflowing content */
+    text-overflow: ellipsis; /* Adds ellipsis (...) to indicate overflow */
   }
 
   .paradise {
-    font-size: 54px;
+    font-size: 15vw;
   }
 
   .countdown {
     font-size: 8px;
+    white-space: nowrap; /* Prevents text from wrapping to the next line */
+    overflow: hidden; /* Hides any overflowing content */
+    text-overflow: ellipsis; /* Adds ellipsis (...) to indicate overflow */
   }
 
   .landing-splash-container {
     background-image: url('../../assets/images/background.svg'); /* Add the background image */
-    margin: 0px -4vw;
+    width: 100vw; /* Full viewport width */
+    margin: 0;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .landing-splash-container {
     background-image: url('../../assets/images/background.svg'); /* Add the background image */
-    margin: 0px -28vw;
+    width: 100vw; /* Full viewport width */
+    margin: 0;
   }
+}
+
+/* New style for .paradise */
+.paradise {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900; /* Black font weight */
+  font-style: italic;
+  font-size: 10vw; /* Adjust based on viewport width */
 }
