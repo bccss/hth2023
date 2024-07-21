@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../stylesheets/LandingSplash.css';
-import background from '../../assets/images/background.svg'; // Correctly import the SVG
+import background from '../../assets/images/background.svg';
 
 const LandingSplash = () => {
   const calculateTimeLeft = () => {
@@ -47,11 +47,11 @@ const LandingSplash = () => {
     <div>
       <div className="landing-splash-container">
         <div className="content-wrapper">
-          <div className="paradise">PARADISE</div>
+          <div className="paradise typing-effect">paradise</div>
           <div className="subtitle">@ Boston College</div>
-          <div className="countdown">
-            {timerComponents.length ? timerComponents : <span>Time's up!</span>}
-          </div>
+        </div>
+        <div className="countdown-widget">
+          {timerComponents.length ? timerComponents : <span>Time's up!</span>}
         </div>
       </div>
       <div className="gradient-transition"></div>

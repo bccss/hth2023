@@ -1,22 +1,21 @@
 .gradient-transition {
-  height: 50px; /* Adjust height as needed */
+  height: 50px;
   background: #343D24;
-  width: 100vw; /* Full viewport width */
+  width: 100vw;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   margin: 0;
-  border-bottom-left-radius: 20px; /* Adjust the radius as needed */
-  border-bottom-right-radius: 20px; /* Adjust the radius as needed */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
-/* Other existing styles */
 html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
 .landing-splash-container {
@@ -27,20 +26,73 @@ html, body {
   min-height: 100vh;
   text-align: center;
   color: #F9F6F0;
-  background-image: url('../../assets/images/background.svg'); /* Add the background image */
+  background-image: url('../../assets/images/background.svg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 100vw; /* Full viewport width */
+  width: 100vw;
   margin: 0;
+  position: relative; /* To position the countdown at the bottom */
 }
 
 .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 2rem;
-  width: 50%;
+  width: 100%;
   max-width: 1200px;
 }
 
+.subtitle {
+  font-size: 1.2rem; /* Adjust as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.paradise {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 10vw;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+.countdown-widget {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  text-align: center;
+  font-size: 1.5rem; /* Adjust as needed */
+  background-color: rgba(0, 0, 0, 0.7); /* Adjust background color and opacity as needed */
+  color: #F9F6F0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 90%; /* Adjust as needed */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Typing effect animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Blinking caret animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
 
 @media only screen and (max-width: 767px) {
   .bccss {
@@ -49,41 +101,28 @@ html, body {
 
   .subtitle {
     font-size: 12px;
-    white-space: nowrap; /* Prevents text from wrapping to the next line */
-    overflow: hidden; /* Hides any overflowing content */
-    text-overflow: ellipsis; /* Adds ellipsis (...) to indicate overflow */
   }
 
   .paradise {
-    font-size: 15vw;
+    font-size: 14vw;
   }
 
-  .countdown {
-    font-size: 8px;
-    white-space: nowrap; /* Prevents text from wrapping to the next line */
-    overflow: hidden; /* Hides any overflowing content */
-    text-overflow: ellipsis; /* Adds ellipsis (...) to indicate overflow */
+  .countdown-widget {
+    font-size: 1rem; /* Adjust for smaller screens */
+    bottom: 10px; /* Adjust for smaller screens */
+    padding: 5px;
+    max-width: 95%; /* Adjust as needed */
   }
 
   .landing-splash-container {
-    background-image: url('../../assets/images/background.svg'); /* Add the background image */
-    width: 100vw; /* Full viewport width */
+    width: 100vw;
     margin: 0;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .landing-splash-container {
-    background-image: url('../../assets/images/background.svg'); /* Add the background image */
-    width: 100vw; /* Full viewport width */
+    width: 100vw;
     margin: 0;
   }
-}
-
-/* New style for .paradise */
-.paradise {
-  font-family: 'Playfair Display', serif;
-  font-weight: 900; /* Black font weight */
-  font-style: italic;
-  font-size: 10vw; /* Adjust based on viewport width */
 }

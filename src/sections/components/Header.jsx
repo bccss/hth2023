@@ -50,7 +50,7 @@ export default function Header() {
             <Link href="#" onClick={scrollToTop}>
               <img src={hthLogo} alt="HTH Logo" style={{ maxHeight: '40px', marginRight: '10px' } } />
             </Link>
-            <Link href="https://join.slack.com/t/your-slack-workspace-link" target="_blank" rel="noopener noreferrer">
+            <Link href="https://bccss.slack.com/" target="_blank" rel="noopener noreferrer">
               <img src={slackLogo} alt="Slack Logo" style={{ maxHeight: '40px', marginRight: '10px' }} />
             </Link>
           </Box>
