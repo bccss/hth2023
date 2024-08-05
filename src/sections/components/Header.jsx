@@ -21,6 +21,14 @@ const HeaderLink = styled(Link)({
   },
 });
 
+const RegisterButton = styled(Button)({
+  backgroundColor: 'gold',
+  color: '#343D24',
+  '&:hover': {
+    backgroundColor: 'pink',
+  },
+});
+
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(null);
 
@@ -48,13 +56,13 @@ export default function Header() {
         <Toolbar>
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
             <Link href="#" onClick={scrollToTop}>
-              <img src={hthLogo} alt="HTH Logo" style={{ maxHeight: '40px', marginRight: '10px' } } />
+              <img src={hthLogo} alt="HTH Logo" style={{ maxHeight: '40px', marginRight: '10px' }} />
             </Link>
             <Link href="https://bccss.slack.com/" target="_blank" rel="noopener noreferrer">
               <img src={slackLogo} alt="Slack Logo" style={{ maxHeight: '40px', marginRight: '10px' }} />
             </Link>
           </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
             {menuItems.map(item => (
               <Button
                 color="inherit"
@@ -65,6 +73,14 @@ export default function Header() {
                 <HeaderLink href={`#${item}`}>{item}</HeaderLink>
               </Button>
             ))}
+            <RegisterButton
+              href="https://forms.gle/VSmNjxhrw2nW6G7D9"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ ml: 2, fontSize: '1rem', fontFamily: 'Poppins, sans-serif', padding: '8px 16px' }} // Adjust the font size and padding
+            >
+              register
+            </RegisterButton>
           </Box>
           <IconButton
             color="inherit"

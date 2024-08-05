@@ -55,18 +55,34 @@ html, body {
 .paradise {
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
-  font-size: 10vw;
+  font-size: 7.5vw;
   max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: #F9F6F0;
+  perspective: 1000px; /* Define the perspective for the 3D effect */
 }
 
-.typing-effect {
+.paradise-text {
   display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+  animation: rotate3D 8s infinite; /* Apply the 3D rotation animation with a slower speed */
+  transform-style: preserve-3d; /* Preserve the 3D effect */
+}
+
+@keyframes rotate3D {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 .countdown-widget {
@@ -80,18 +96,6 @@ html, body {
   border-radius: 10px;
   max-width: 90%; /* Adjust as needed */
   margin: 0 auto; /* Center horizontally */
-}
-
-/* Typing effect animation */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-/* Blinking caret animation */
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: orange; }
 }
 
 @media only screen and (max-width: 767px) {

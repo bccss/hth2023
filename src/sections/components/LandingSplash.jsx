@@ -47,7 +47,9 @@ const LandingSplash = () => {
     <div>
       <div className="landing-splash-container">
         <div className="content-wrapper">
-          <div className="paradise typing-effect">paradise</div>
+          <div className="paradise">
+            <span className="paradise-text">paradise</span>
+          </div>
           <div className="subtitle">@ Boston College</div>
         </div>
         <div className="countdown-widget">

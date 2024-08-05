@@ -10,7 +10,7 @@ const dataCollection = [
   {
     question: "How do I, or my team, qualify?",
     answer:
-      "Any student at Boston College is welcome to join us! Teams can have a maximum of four people. You can either register with your team using the form or create one during the event!",
+      "Any student at Boston College is welcome to join us! Teams can have a maximum of four people. You can either register with your team using the form above or create one during the event! Individuals are also welcome to compete",
   },
   {
     question: "Will there be food provided?",
@@ -36,6 +36,11 @@ const dataCollection = [
     question: "Are there going to be prizes?",
     answer:
       "You bet!",
+  },
+  {
+    question: "How is the hackathon structured and who decides the winners?",
+    answer:
+      "The hackathon will follow a schedule called a devpost which includes different workshops and final submission deadlines. All prizes are determined by independant professors who volunteer their time as judges",
   },
 ];
 

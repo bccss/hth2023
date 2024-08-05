@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Grid, Link, Typography } from '@mui/material';
 import { Facebook, Twitter, Instagram } from '@mui/icons-material';
+import mlhLogo from '../../assets/icons/mlh.svg'; // Make sure to update the path to your actual logo file
 
 const Footer = () => {
   return (
@@ -18,12 +19,17 @@ const Footer = () => {
       id="Contact"
     >
       <Grid container justifyContent="space-between" alignItems="center">
-        <Grid item xs={12} md={6}>
-        <Typography sx={{ fontSize: '0.875rem' }}>
-          &copy; {new Date().getFullYear()} Hack-the-Heights. All rights reserved. Organized @ Boston College.
-        </Typography>
+        <Grid item xs={12} md={3} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+          <Link href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank" rel="noopener">
+            <img src={mlhLogo} alt="MLH Logo" style={{ width: '100px' }} />
+          </Link>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ textAlign: { xs: 'center', md: 'right' } }}>
+        <Grid item xs={12} md={6}>
+          <Typography sx={{ fontSize: '0.875rem' }}>
+            &copy; {new Date().getFullYear()} Hack-the-Heights. All rights reserved. Organized @ Boston College.
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={3} sx={{ textAlign: { xs: 'center', md: 'right' } }}>
           <Link href="https://www.facebook.com/bostoncollegecss/" color="inherit" sx={{ mx: 1 }}>
             <Facebook
               sx={{
