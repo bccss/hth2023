@@ -10,7 +10,6 @@
 
 .container {
     background-color: var(--secondary-background-color);
-    min-height: 100vh;
     padding: 2rem;
   }
   

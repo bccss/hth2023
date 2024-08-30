@@ -1,7 +1,7 @@
 {
   "name": "hacktheheights",
   "version": "0.1.0",
-  "homepage": "https://bccss.github.io/hacktheheights/",
+  "homepage": "https://www.hacktheheights.org",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.11.1",
