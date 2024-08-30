@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import "../stylesheets/PhotoCarousel.css";
 
 const PhotoCarousel = () => {
@@ -24,33 +24,33 @@ const PhotoCarousel = () => {
 
   return (
     <div className="carousel-container" id="Past Events">
-      <h2 className="title">past hackathons :)</h2> 
+      <h2 className="carousel-heading">← past hackathons →</h2> 
       <div className="carousel">
-        <BsArrowLeftCircleFill className="arrow arrow-left" onClick={prevSlide} />
+        <button className="arrow arrow-left" onClick={prevSlide}>
+          <ChevronLeft size={32} />
+        </button>
         <div className="slide-container">
-          {slides.map((item, idx) => {
-            return (
-              <img 
-                src={process.env.PUBLIC_URL + item.src} 
-                alt={item.alt} 
-                key={idx} 
-                className={slide === idx ? "slide active" : "slide"} 
-              />
-            );
-          })}
+          {slides.map((item, idx) => (
+            <img 
+              src={process.env.PUBLIC_URL + item.src} 
+              alt={item.alt} 
+              key={idx} 
+              className={slide === idx ? "slide active" : "slide"} 
+            />
+          ))}
         </div>
-        <BsArrowRightCircleFill className="arrow arrow-right" onClick={nextSlide} />
-        <div className="indicators">
-          {slides.map((_, idx) => {
-            return (
-              <button
-                key={idx}
-                onClick={() => setSlide(idx)}
-                className={slide === idx ? "indicator active" : "indicator"}
-              ></button>
-            );
-          })}
-        </div>
+        <button className="arrow arrow-right" onClick={nextSlide}>
+          <ChevronRight size={32} />
+        </button>
+      </div>
+      <div className="indicators">
+        {slides.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setSlide(idx)}
+            className={slide === idx ? "indicator active" : "indicator"}
+          ></button>
+        ))}
       </div>
     </div>
   );

@@ -52,7 +52,7 @@ export default function Header() {
 
   return (
     <>
-      <AppBar position="sticky" sx={{ backgroundColor: '#343D24', fontFamily: 'Poppins, sans-serif', borderRadius: '0 0 16px 16px' }} className='header'>
+      <AppBar position="sticky" sx={{ backgroundColor: '#343D24', fontFamily: 'Poppins, sans-serif' }} className='header'>
         <Toolbar>
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
             <Link href="#" onClick={scrollToTop}>

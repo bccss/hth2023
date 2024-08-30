@@ -1,7 +1,6 @@
 /* Import the required fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@400&display=swap');
 
-/* Root variables for colors */
 :root {
   --font-color: #F9F6F0;
   --secondary-color: #343D24;
@@ -10,137 +9,76 @@
   --accent-color: #BD897E;
 }
 
-/* General styles */
-body {
-  background-color: var(--background-color);
-  color: var(--font-color);
-  font-family: 'Poppins', sans-serif;
+.container {
+  padding: 2rem;
+}
+
+.events-heading {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .events-description {
-  font-size: 1.1em;
-  margin-bottom: 30px;
+  color: var(--background-color);
   text-align: center;
-  color: var(--font-color);
+  margin-bottom: 2rem;
 }
 
-/* Container */
-.container {
-  max-width: 1360px;
-  width: 100%;
-  margin: auto;
-  padding: 0px 20px;
-  margin-bottom: 0
-}
-
-#Events {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Heading */
-.events-heading {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  color: var(--secondary-color);
-  text-align: center;
-}
-
-/* Timeline Container */
-.timeline-container {
-  width: 100%;
-  overflow-x: auto;
-  display: flex;
-  justify-content: center;
-  height: 420px; /* Adjusted height to match the cards */
-}
-
-.timeline {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100%; /* Make sure the timeline takes full height of the container */
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.timeline-item {
-  flex: 0 0 340px; /* Adjusted width */
-  scroll-snap-align: center;
-  margin: 0 10px; /* Reduced space between items */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Card */
 .card {
-  display: flex;
-  flex-direction: column;
-  background: var(--background-color);
-  border-radius: 25px;
-  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 300px; /* Make sure the card takes full height of the timeline item */
-  width: 320px; /* Adjusted width */
-  box-sizing: border-box;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
 }
 
-/* Card Header */
+.card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
 .card-header {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
-.card-image {
-  width: 70px;
-  height: 70px;
-  margin-right: 20px;
+.card-icon {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-/* Card Details */
-.card-details {
-  flex: 1;
+.card-icon svg {
+  color: var(--secondary-background-color);
 }
 
 .card-details h3 {
-  font-size: 1.25em;
   color: var(--font-color);
-  margin-bottom: 5px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .card-details p {
-  font-size: 0.9em;
-  color: var(--font-color);
+  color: var(--secondary-background-color);
+  margin: 0;
 }
 
-/* Card Content */
 .card-content p {
-  font-size: 1em;
   color: var(--font-color);
-  line-height: 1.5em;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .timeline-item {
-    flex: 0 0 80%; /* Adjust width for mobile screens */
-    margin: 0 5px; /* Reduced space between items */
-  }
+.timeline-item {
+  margin-bottom: 2rem;
+}
 
-  .card {
-    padding: 15px;
-    height: 300px; /* Ensure the card takes full height */
-    width: 280px; /* Adjusted width for mobile */
-  }
+/* You can add this if you want to use the accent color somewhere */
+.accent-text {
+  color: var(--accent-color);
 }

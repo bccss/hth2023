@@ -1,47 +1,59 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Users, Github, Code, Database, Cog } from 'lucide-react';
 import "../stylesheets/Events.css";
-
-import firstMeeting from '../../assets/icons/firstmeeting.png';
-import frontend from '../../assets/icons/html.png';
-import githubIcon from '../../assets/icons/github.png';
-import flask from '../../assets/icons/flask.png';
-import MySQL from '../../assets/icons/mysql.png';
 
 function Events() {
   const [cards] = useState([
     {
       title: "First General Meeting",
-      time: "September 4th",
-      text: "Learn about Hack the Heights and our club! ",
-      imgSrc: firstMeeting
+      time: new Date("2024-09-04T19:30:00"),
+      text: "Kick off the semester in style! Get the inside scoop on our fall lab series, Hack-the-Heights, and our action-packed calendar for the year.",
+      location: "245 Beacon St. 205",
+      Icon: Users
     },
     {
       title: "Intro to GitHub",
-      time: "September 11th",
-      text: "Learn about how to use GitHub, specifically for your future hackathon project!",
-      imgSrc: githubIcon
+      time: new Date("2024-09-11T19:00:00"),
+      text: "Unlock the power of collaboration! Master GitHub essentials and set yourself up for success in your coding journey and future hackathons.",
+      location: "245 Beacon St. 214",
+      Icon: Github
     },
     {
       title: "Frontend in HTML/CSS",
-      time: "September 18th",
-      text: "Learn all about how to make a responsive, and scaleable frontend for a web application",
-      imgSrc: frontend
+      time: new Date("2024-09-18T19:00:00"),
+      text: "Craft stunning web experiences! Learn to build responsive and scalable frontends that will make your applications stand out from the crowd.",
+      location: "245 Beacon St. 214",
+      Icon: Code
     },
     {
-      title: "Backend in Flask",
-      time: "September 25th",
-      text: "Learn how to extract, transform, and load data in a user facing application",
-      imgSrc: flask
+      title: "Backend Development",
+      time: new Date("2024-09-25T19:30:00"),
+      text: "Power up your apps from behind the scenes! Discover how to create robust backends that handle data, logic, and user interactions with ease.",
+      location: "245 Beacon St. 205",
+      Icon: Code
     },
     {
       title: "All About Databases",
-      time: "October 2nd",
-      text: "Leverage MySQL to store, update, and delete your own data",
-      imgSrc: MySQL
+      time: new Date("2024-10-02T19:00:00"),
+      text: "Dive into the world of databases! Learn how to design efficient database schemas, write powerful queries, and integrate database operations into your applications.",
+      location: "245 Beacon St. 214",
+      Icon: Database
     }
   ]);
 
   const timelineRef = useRef(null);
+
+  const shouldRenderCard = (card) => {
+    return card.time > new Date();
+  }
+
+  const formatTime = (date) => {
+    return date.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+  }
+
+  const formatDate = (date) => {
+    return date.toLocaleString('en-US', { month: 'long', day: 'numeric' });
+  }
 
   useEffect(() => {
     const options = {
@@ -73,20 +85,23 @@ function Events() {
 
   return (
     <div className="container" id="Events">
-      <h1 className="events-heading">←workshops→</h1>
-      <div className="events-description">Not completely ready for a hackathon yet? Not problem, attend one of our pre-hack workshops to learn all that you need.</div>
+      <h1 className="events-heading">← events →</h1>
+      <div className="events-description">
+        Not completely ready for a hackathon yet? No problem, attend one of our pre-hack workshops to learn all that you need.
+      </div>
       <div className="timeline-container" ref={timelineRef}>
         <div className="timeline">
-          {cards.map((card, index) => (
+          {cards.filter(shouldRenderCard).map((card, index) => (
             <div key={index} className="timeline-item">
               <div className="card">
                 <div className="card-header">
-                  <div className="card-image">
-                    <img src={card.imgSrc} alt={card.title} />
+                  <div className="card-icon">
+                    <card.Icon size={48} />
                   </div>
                   <div className="card-details">
                     <h3>{card.title}</h3>
-                    <p>{card.time}</p>
+                    <p>{formatDate(card.time) + ", " + formatTime(card.time)}</p>
+                    <p>{card.location}</p>
                   </div>
                 </div>
                 <div className="card-content">

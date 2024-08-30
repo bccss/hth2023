@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import "../stylesheets/Sponsors.css";
 
 import mlhLogo from '../../assets/images/mlh-logo.png';
@@ -6,49 +6,27 @@ import schillerLogo from '../../assets/images/schiller-logo.png';
 
 const Sponsors = () => {
   const sponsorList = [
-    { name: 'Sponsor1', logoSrc: mlhLogo },
-    { name: 'Sponsor2', logoSrc: schillerLogo },
-    // Add more sponsors as needed
+    { name: 'Major League Hacking', logoSrc: mlhLogo },
+    { name: 'Schiller Institute for Integrated Science and Society', logoSrc: schillerLogo },
   ];
 
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-    const sponsorLogos = scrollRef.current;
-    let scrollAmount = 0;
-
-    const scrollSponsors = () => {
-      scrollAmount += 1; // Adjust speed by changing this value
-      sponsorLogos.scrollLeft = scrollAmount;
-      if (scrollAmount >= sponsorLogos.scrollWidth - sponsorLogos.clientWidth) {
-        scrollAmount = 0;
-      }
-      requestAnimationFrame(scrollSponsors);
-    };
-
-    scrollSponsors();
-  }, []);
-
   return (
-    <div className="section" id="Sponsors">
-      <div className="sponsors-container">
-        <div className="row-sponsor">
-          <h1 id="sponsor-header">sponsors</h1>
-          <div className="container">
-            <div id="sponsor-logos" ref={scrollRef}>
-              {sponsorList.map(sponsor => (
-                <div key={sponsor.name} className="sponsor-logo-container">
-                  <img src={sponsor.logoSrc} alt={`${sponsor.name} Logo`} />
-                </div>
-              ))}
+    <div className="sponsors-container" id="Sponsors">
+      <h2 className="sponsors-heading">← sponsors →</h2>
+      <div className="sponsors-grid">
+        {sponsorList.map(sponsor => (
+          <div key={sponsor.name} className="sponsor-item">
+            <div className="sponsor-logo">
+              <img src={sponsor.logoSrc} alt={`${sponsor.name} Logo`} />
             </div>
+            <p className="sponsor-name">{sponsor.name}</p>
           </div>
-          <p className="description">
-            If you'd like to sponsor this event, please contact us at &nbsp;
-            <a href="mailto:bccss@gmail.com">bccssociety@gmail.com</a>
-          </p>
-        </div>
+        ))}
       </div>
+      <p className="sponsors-contact">
+        If you'd like to sponsor this event, please contact us at{' '}
+        <a href="mailto:bcssociety@gmail.com">bcssociety@gmail.com</a>
+      </p>
     </div>
   );
 };

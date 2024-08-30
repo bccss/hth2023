@@ -10,102 +10,88 @@
     --secondary-background-color: #D6CEA2;
     --accent-color: #BD897E;
 }
-
-.section {
-    width: 100%;
+  
+  .sponsors-container {
+    background-color: var(--secondary-background-color);
+    padding: 3rem 1rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 2rem 0;
-}
-
-/* Centered Container */
-.sponsors-container {
-    width: 80%; /* Adjust this based on your design requirements */
-    max-width: 1200px; /* You can adjust this value based on your design requirements */
-    margin: 0 auto;
-}
-
-/* Style for the header */
-#sponsor-header {
-    font-size: 2rem;
+  }
+  
+  .sponsors-heading {
     color: var(--secondary-color);
-    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 2rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-}
-
-/* Container for all the logos */
-#sponsor-logos {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+  }
+  
+  .sponsors-grid {
     display: flex;
-    flex-wrap: wrap; /* This will allow logos to wrap to the next line when needed */
-    justify-content: center; /* Center the logos horizontally */
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .sponsor-item {
+    background-color: var(--background-color);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem; /* This gives space between logos */
-}
-
-/* Each logo container */
-.sponsor-logo-container {
-    width: calc(33.33% - 1rem); /* One third of the container's width minus gap */
+  }
+  
+  .sponsor-logo {
+    height: 150px;
     display: flex;
-    flex-direction: column; /* Stack the image and its name vertically */
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem; /* Space at the bottom */
-    transition: transform 0.3s; /* Smooth transition for transform */
-}
-
-.sponsor-logo-container:hover {
-    transform: scale(1.1); /* Increase size by 10% on hover */
-}
-
-.sponsor-logo-container img {
-    width: 70%; /* Adjust based on your design preference */
-    height: auto;
-}
-
-/* Styling for the description */
-.description {
-    font-size: 1rem;
-    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sponsor-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .sponsor-name {
+    color: var(--font-color);
+    font-size: 1.2rem;
     text-align: center;
-    color: #F9F6F0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-}
-
-/* Styling for the email link */
-.description a {
+    font-weight: bold;
+  }
+  
+  .sponsors-contact {
+    color: var(--background-color);
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    max-width: 600px;
+  }
+  
+  .sponsors-contact a {
+    color: var(--secondary-color);
     text-decoration: none;
-    transition: color 0.3s;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-}
-
-.description a:hover {
-    color: #F9F6F0; /* Adjust based on your color scheme */
-}
-
-/* Container for all the logos */
-#sponsor-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.sponsor-names {
-    font-size: 30px;
-    color: #F9F6F0;
-    font-weight: 600;
-}
-
-#sponsor-logos .sponsor-logo-container:nth-last-child(2) {
-    width: 45%;
-}
-
-#sponsor-logos .sponsor-logo-container:last-child {
-    width: 45%;
-}
+    transition: color 0.3s ease;
+  }
+  
+  .sponsors-contact a:hover {
+    color: var(--accent-color);
+  }
+  
+  @media (min-width: 768px) {
+    .sponsors-grid {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .sponsor-item {
+      flex: 1;
+      max-width: 400px;
+    }
+  }

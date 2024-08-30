@@ -50,13 +50,13 @@ const LandingSplash = () => {
           <div className="paradise">
             <span className="paradise-text">paradise</span>
           </div>
-          <div className="subtitle">@ Boston College</div>
+          <div className="subtitle">Boston College's Annual Hackathon</div>
+          <div className="subtitle">October 5-6</div>
         </div>
         <div className="countdown-widget">
           {timerComponents.length ? timerComponents : <span>Time's up!</span>}
         </div>
       </div>
-      <div className="gradient-transition"></div>
     </div>
   );
 };
