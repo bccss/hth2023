@@ -6,7 +6,7 @@ function Events() {
   const [cards] = useState([
     {
       title: "First General Meeting",
-      time: new Date("2024-09-04T19:30:00"),
+      time: new Date("2024-09-05T20:00:00"),
       text: "Kick off the semester in style! Get the inside scoop on our fall lab series, Hack-the-Heights, and our action-packed calendar for the year.",
       location: "245 Beacon St. 205",
       Icon: Users
