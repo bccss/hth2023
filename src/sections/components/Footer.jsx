@@ -20,9 +20,6 @@ const Footer = () => {
     >
       <Grid container justifyContent="space-between" alignItems="center">
         <Grid item xs={12} md={3} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-          <Link href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank" rel="noopener">
-            <img src={mlhLogo} alt="MLH Logo" style={{ width: '100px' }} />
-          </Link>
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography sx={{ fontSize: '0.875rem' }}>

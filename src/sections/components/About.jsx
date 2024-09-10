@@ -5,7 +5,7 @@ import "../stylesheets/About.css";
 function About() {
   return (
     <div className="container" id="About">
-      <h1 className="about-heading">about!</h1>
+      <h1 className="about-heading">← about →</h1>
       <p className="about-description">
         Join us on October 5th to 6th for a weekend of hacking, learning, and exploration!
       </p>

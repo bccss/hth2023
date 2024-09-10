@@ -1,12 +1,12 @@
 import React from 'react';
 import "../stylesheets/Sponsors.css";
 
-import mlhLogo from '../../assets/images/mlh-logo.png';
 import schillerLogo from '../../assets/images/schiller-logo.png';
+import cmtLogo from "../../assets/images/cmt-logo.webp"
 
 const Sponsors = () => {
   const sponsorList = [
-    { name: 'Major League Hacking', logoSrc: mlhLogo },
+    { name: 'Cambridge Mobile Telematics', logoSrc: cmtLogo },
     { name: 'Schiller Institute for Integrated Science and Society', logoSrc: schillerLogo },
   ];
 
