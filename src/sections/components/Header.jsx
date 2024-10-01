@@ -74,7 +74,7 @@ export default function Header() {
               </Button>
             ))}
             <DevpostButton
-              href="https://devpost.com/" //Replace with the actual devpost link
+              href="https://hack-the-heights-x.devpost.com" //Replace with the actual devpost link
               target='_blank'
               rel="noopener noreferrer"
               sx={{ ml: 2, fontSize: '1rem', fontFamily: 'Poppins, sans-serif', padding: '8px 16px' }} //Adjust the font size and padding
