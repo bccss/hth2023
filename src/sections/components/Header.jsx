@@ -21,12 +21,12 @@ const HeaderLink = styled(Link)({
   },
 });
 
-const RegisterButton = styled(Button)({
-  backgroundColor: 'gold',
+const DevpostButton = styled(Button)({
+  backgroundColor: 'lightblue',
   color: '#343D24',
   '&:hover': {
-    backgroundColor: 'pink',
-  },
+    backgroundColor: 'dodgerblue',
+  }
 });
 
 export default function Header() {
@@ -73,14 +73,14 @@ export default function Header() {
                 <HeaderLink href={`#${item}`}>{item}</HeaderLink>
               </Button>
             ))}
-            <RegisterButton
-              href="https://forms.gle/VSmNjxhrw2nW6G7D9"
-              target="_blank"
+            <DevpostButton
+              href="https://devpost.com/" //Replace with the actual devpost link
+              target='_blank'
               rel="noopener noreferrer"
-              sx={{ ml: 2, fontSize: '1rem', fontFamily: 'Poppins, sans-serif', padding: '8px 16px' }} // Adjust the font size and padding
-            >
-              register
-            </RegisterButton>
+              sx={{ ml: 2, fontSize: '1rem', fontFamily: 'Poppins, sans-serif', padding: '8px 16px' }} //Adjust the font size and padding
+              >
+                devpost
+              </DevpostButton>
           </Box>
           <IconButton
             color="inherit"
