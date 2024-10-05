@@ -1,0 +1,147 @@
+/* Schedule.css */
+
+/* Import the required fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@400&display=swap');
+
+/* Root variables for colors */
+/* Root variables for colors */
+:root {
+    --font-color: #F9F6F0;
+    --secondary-color: #343D24;
+    --background-color: #647D5B;
+    --secondary-background-color: #D6CEA2;
+    --accent-color: #BD897E;
+    --workshop-color: #fa8a02; /* Orange for workshops */
+    --social-color: #4C6A92; /* Soft blue for social activities */
+    --meal-color: #88B04B; /* Green for meals */
+    --sponsor-color: #d989fb; /* White for sponsors */
+    --important-color: #D9534F; /* Red for important events */
+  }
+
+.schedule-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--secondary-background-color);
+  border-radius: 8px;
+  color: var(--font-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.schedule-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+.schedule-key {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.schedule-key .key-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+.schedule-key .key-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.key-important {
+    background-color: var(--important-color);
+  }
+  
+.key-workshop {
+    background-color: var(--workshop-color);
+}
+
+.key-social {
+    background-color: var(--social-color);
+}
+
+.key-meal {
+    background-color: var(--meal-color);
+}
+
+.key-sponsor {
+    background-color: var(--sponsor-color);
+}
+
+.schedule-columns {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.schedule-day {
+  flex: 1;
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-day h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--font-color);
+}
+
+.event-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: var(--secondary-background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--font-color);
+  transition: transform 0.3s;
+}
+
+.event-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.event-important {
+    background-color: var(--important-color);
+}
+
+.event-workshop {
+    background-color: var(--workshop-color);
+}
+
+.event-social {
+    background-color: var(--social-color);
+}
+
+.event-meal {
+    background-color: var(--meal-color);
+}
+
+.event-sponsor {
+    background-color: var(--sponsor-color);
+}
+
+@media (max-width: 768px) {
+  .schedule-columns {
+    flex-direction: column;
+  }
+
+  .schedule-key {
+    flex-direction: column;
+  }
+
+  .schedule-day {
+    margin-bottom: 20px;
+  }
+}

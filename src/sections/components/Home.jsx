@@ -11,20 +11,27 @@ import {
   Sponsors,
   PhotoCarousel,
   Footer,
+  Schedule,
+  Theme
 } from "./index.js";
 
 const Home = () => {
+  const currentDate = new Date();
+  const targetDate = new Date('2024-10-05T12:30:00-04:00');
+
   return (
     <Box sx={{ bgcolor: "#D6CEA2", display: 'flex', flexDirection: 'column' }}>
       <Header />
       {/* Place LandingSplash outside the Container to make it full width */}
       <LandingSplash />
       <Container component="main" sx={{ flex: 1 }}>
-        <About />
-        <Events />
+        {/* <About /> */}
+        {currentDate > targetDate && <Theme />}
+        <Schedule />
+        {/* <Events /> */}
         <FAQ />
-        {<Sponsors />}
-        <PhotoCarousel data={slides} />
+        <Sponsors />
+        {/* <PhotoCarousel data={slides} /> */}
       </Container>
       <Footer />
     </Box>

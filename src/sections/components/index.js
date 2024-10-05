@@ -6,6 +6,8 @@ import FAQ from "./FAQ";
 import Footer from "./Footer";
 import Events from "./Events";
 import Home from './Home';
+import Schedule from "./Schedule";
+import Theme from "./Theme";
 
 export {
     LandingSplash,
@@ -16,4 +18,6 @@ export {
     Events,
     Footer,
     Home, 
+    Schedule,
+    Theme
 }

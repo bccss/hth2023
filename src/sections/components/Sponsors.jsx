@@ -3,11 +3,13 @@ import "../stylesheets/Sponsors.css";
 
 import schillerLogo from '../../assets/images/schiller-logo.png';
 import cmtLogo from "../../assets/images/cmt-logo.webp"
+import dellLogo from "../../assets/images/dell-logo.png"
 
 const Sponsors = () => {
   const sponsorList = [
     { name: 'Cambridge Mobile Telematics', logoSrc: cmtLogo },
-    { name: 'Schiller Institute for Integrated Science and Society', logoSrc: schillerLogo },
+    { name: 'Schiller Institute', logoSrc: schillerLogo },
+    { name: 'Dell', logoSrc: dellLogo }
   ];
 
   return (
@@ -23,10 +25,10 @@ const Sponsors = () => {
           </div>
         ))}
       </div>
-      <p className="sponsors-contact">
+      {/* <p className="sponsors-contact">
         If you'd like to sponsor this event, please contact us at{' '}
         <a href="mailto:bcssociety@gmail.com">bcssociety@gmail.com</a>
-      </p>
+      </p> */}
     </div>
   );
 };

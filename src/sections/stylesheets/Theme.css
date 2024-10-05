@@ -1,0 +1,145 @@
+/* Import the required fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@400&display=swap');
+
+:root {
+  --font-color: #F9F6F0;
+  --secondary-color: #343D24;
+  --background-color: #647D5B;
+  --secondary-background-color: #D6CEA2;
+  --accent-color: #BD897E;
+}
+
+/* General styles */
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  background-color: var(--secondary-background-color);
+  padding: 3rem;
+  border-radius: 0.5rem;
+}
+
+.theme-heading {
+  color: var(--secondary-color);
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  background-color: var(--secondary-background-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.theme-description {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.theme-description h1 {
+  color: var(--secondary-color);
+  text-decoration: underline;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.theme-description p {
+  color: var(--background-color);
+  font-size: 1.25rem;
+}
+
+.subthemes-container {
+  margin-bottom: 4rem;
+}
+
+.subthemes-container h3 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.subthemes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.subtheme-card {
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  flex: 1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.subtheme-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.subtheme-icon {
+  margin-bottom: 1.5rem;
+}
+
+.subtheme-icon svg {
+  color: var(--secondary-background-color);
+}
+
+.subtheme-card h4 {
+  color: var(--font-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.subtheme-card p {
+  color: var(--secondary-background-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.project-directions-container {
+  margin-bottom: 4rem;
+}
+
+.project-directions-container h3 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.project-ideas {
+  list-style-type: disc;
+  padding-left: 2.5rem;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+.project-ideas li {
+  color: var(--background-color);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .subthemes {
+    flex-direction: column;
+  }
+
+  .subtheme-card {
+    width: 100%;
+  }
+}

@@ -40,7 +40,8 @@ export default function Header() {
     setOpenMenu(null);
   };
 
-  const menuItems = ["About", "Events", "FAQ", "Sponsors", "Past Events"];
+  // const menuItems = ["About", "Events", "FAQ", "Sponsors", "Past Events"];
+  const dayOfMenuItems = ["Theme", "Schedule", "FAQ", "Sponsors"];
 
   const scrollToTop = (event) => {
     event.preventDefault();
@@ -63,7 +64,7 @@ export default function Header() {
             </Link>
           </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
-            {menuItems.map(item => (
+            {dayOfMenuItems.map(item => (
               <Button
                 color="inherit"
                 key={item}
@@ -97,7 +98,7 @@ export default function Header() {
             onClose={handleMenuClose}
             PaperProps={{ style: { backgroundColor: '#343D24' } }}
           >
-            {menuItems.map(item => (
+            {dayOfMenuItems.map(item => (
               <MenuItem onClick={handleMenuClose} key={item} sx={{ color: '#343D24' }}>
                 <HeaderLink href={`#${item}`}>{item}</HeaderLink>
               </MenuItem>

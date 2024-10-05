@@ -37,6 +37,41 @@ const dataCollection = [
   }
 ];
 
+const dayOfFAQ = [
+  {
+    question: "Will there be food provided?",
+    answer: "Absolutely! We are providing lunch and dinner on Saturday and breakfast on Sunday – check the schedule for specifics."
+  },
+  {
+    question: "Where can my team and I work?",
+    answer: "Prior to 5pm on Saturday, we ask that you work above the second floor of 245 Beacon St. After 5pm, you can work anywhere in the building."
+  },
+  {
+    question: "What do I do if I need help?",
+    answer: "You can always ask for help in the HTH channel on Slack or come to the HTH HQ in 245 Beacon St. Room 501. We also have mentors and volunteers available throughout the event to help you with any questions or issues you may have."
+  },
+  {
+    question: "Where do I sleep?",
+    answer: "While coding can be fun, we want you to get some rest when needed! Feel free to go back to your dorm/apartment to sleep or you can stay overnight in Schiller if you're feeling hardcore. There are no restrictions on where you can sleep, but we recommend bringing a sleeping bag and pillow if you plan on staying overnight."
+  },
+  {
+    question: "Do I have to stay for the full 24 hours?",
+    answer: "Not at all – come to hack for as long or as short as you want!"
+  },
+  {
+    question: "What project should I make?",
+    answer: "We have exciting themes for your projects, and the top three teams will win a prize. Don't feel any pressure to make a perfect project, submission is totally optional!"
+  },
+  {
+    question: "Are there going to be prizes?",
+    answer: "You bet! Yes, there will be prizes! For the Grand Prize, you can choose between Apple AirPods, a Keychron Mechanical Keyboard, Sony Noise Cancelling Headphones, an Amazon Echo, or an Apple Watch. The Runner-Up Prize offers a choice between a JBL Speaker, Soundcore Headphones, a Logitech Mouse, or a Wireless Charging Pad. Additionally, there's a Beginner Prize, which includes a $50 gift card of your choice."
+  },
+  {
+    question: "Who decides the winners?",
+    answer: "Winners are determined by BC professors who volunteer their time as judges and follow a standardized rubric."
+  }
+];
+
 function FAQ() {
   const [activeAccordion, setActiveAccordion] = useState(-1);
 
@@ -48,7 +83,7 @@ function FAQ() {
     <div className="container" id="FAQ">
       <h1 className="faq-heading">← faq →</h1>
       <div className="faq-list">
-        {dataCollection.map((item, index) => (
+        {dayOfFAQ.map((item, index) => (
           <div 
             key={index} 
             className={`faq-item ${activeAccordion === index ? 'active' : ''}`}
