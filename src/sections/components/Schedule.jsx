@@ -117,11 +117,11 @@ function Schedule() {
       </div>
       <div className="schedule-columns">
         <div className="schedule-day">
-          <h2>Saturday 9/14</h2>
+          <h2>Saturday 10/5</h2>
           {saturdayEvents.map(renderEvent)}
         </div>
         <div className="schedule-day">
-          <h2>Sunday 9/15</h2>
+          <h2>Sunday 10/6</h2>
           {sundayEvents.map(renderEvent)}
         </div>
       </div>
